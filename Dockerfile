@@ -6,7 +6,8 @@ ARG UID=1000
 ARG GID=1000
 
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir notebook
+# most important: add your python libs
+RUN pip install --no-cache-dir notebook sklarpy copulas 
 
 # add local user
 RUN set -eux; \
