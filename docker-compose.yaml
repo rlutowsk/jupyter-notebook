@@ -1,0 +1,12 @@
+services:
+  gap:
+    image: local/jupyter-notebook:latest
+    container_name: jupyter
+    ports:
+      - "8000:8000"
+    volumes:
+      - data:/notebooks
+    user: 1000:1000
+
+volumes:
+  data:
